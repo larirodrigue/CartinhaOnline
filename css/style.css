@@ -1,0 +1,60 @@
+/* css/estilo.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("ak.gif");
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#fecharBtn {
+    display: none;
+}
+
+.carta {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.7); /* Cor do fundo com 70% de opacidade (0.7) */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    display: none;
+    transition: opacity 0.5s; /* Adiciona uma transição suave de opacidade */
+
+}
+
+/* Adicione esta regra para estilizar a classe "animacao-botao" */
+.animacao-botao {
+    background-color: #0078d4; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona transições suaves para a cor de fundo e transformação (escala) */
+}
+
+/* Adicione esta regra para estilizar o botão quando o mouse passar por cima */
+.animacao-botao:hover {
+    background-color: #005ca9; /* Cor de fundo do botão quando o mouse passa por cima */
+    transform: scale(1.1); /* Aumenta um pouco o tamanho do botão quando o mouse passa por cima */
+    animation: pulse 1s infinite; /* Adiciona uma animação de pulsação infinita */
+}
+
+/* Adicione esta regra para a animação de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

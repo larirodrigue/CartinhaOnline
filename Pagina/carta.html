@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Interativa</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Referência ao arquivo CSS externo na pasta "css" -->
+</head>
+<body>
+    <div class="carta" id="minhaCarta">
+        <h2>Minha Carta</h2>
+        <p>Prezado [Nome do Destinatário],</p>
+        <p>Escreva aqui o conteúdo da sua carta. Você pode adicionar quantos parágrafos quiser.</p>
+        <p>Atenciosamente,</p>
+        <p>[Seu Nome]</p>
+        <button onclick="fecharCarta()">Fechar Carta</button>
+    </div>
+    <button onclick="abrirCarta()">Abrir Carta</button>
+
+    <script>
+        function abrirCarta() {
+            document.getElementById("minhaCarta").style.display = "block";
+        }
+
+        function fecharCarta() {
+            document.getElementById("minhaCarta").style.display = "none";
+        }
+    </script>
+</body>
+</html>
