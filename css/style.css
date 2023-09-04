@@ -1,60 +1,120 @@
-/* css/estilo.css */
+* {
+    font-family: Segoe UI;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-image: url("ak.gif");
-    background-size: 100% 110%;
+    margin: 0;
+    color: #FFF;
+
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./black.gif);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: 1380px 1024px;
+
+} 
+
+.card {
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(#333, #333);
+    transition: all .5s;
+}
+
+.card:hover {
+    background-image: linear-gradient(#672abf, #380e74);
+}
+
+.card .img {
+    width: 360px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 200px;
+    background-image: url('./bf.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+    z-index: 2;
+    position: relative;
+    opacity: .8;
+}
+
+.card .img span {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: italic;
+    transition: all .5s;
+}
+
+.card:hover .img {
+    width: 430px;
+    opacity: 1;
+}
+
+.card:hover .img span {
+    font-size: 28px;
+}
+
+.card .content {
+    padding: 0px 20px;
+    height: 0;
+    opacity: 0;
+    transition: all .5s;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(30px);
+}
+
+.card:hover .content {
+    height: 260px;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .content p {
     margin: 0;
 }
-#fecharBtn {
-    display: none;
+
+.card .content .title {
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.carta {
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.7); /* Cor do fundo com 70% de opacidade (0.7) */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-    display: none;
-    transition: opacity 0.5s; /* Adiciona uma transição suave de opacidade */
-
+.card .content .desc {
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8px;
 }
 
-/* Adicione esta regra para estilizar a classe "animacao-botao" */
-.animacao-botao {
-    background-color: #0078d4; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Adiciona transições suaves para a cor de fundo e transformação (escala) */
+.card .arrow {
+    padding: 15px;
+    transform: rotate(-180deg);
+    transition: all .5s;
 }
 
-/* Adicione esta regra para estilizar o botão quando o mouse passar por cima */
-.animacao-botao:hover {
-    background-color: #005ca9; /* Cor de fundo do botão quando o mouse passa por cima */
-    transform: scale(1.1); /* Aumenta um pouco o tamanho do botão quando o mouse passa por cima */
-    animation: pulse 1s infinite; /* Adiciona uma animação de pulsação infinita */
+.card:hover .arrow {
+    transform: rotate(0);
 }
 
-/* Adicione esta regra para a animação de pulsação */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.card .arrow span {
+    font-size: 24px;
 }
